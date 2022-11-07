@@ -51,6 +51,16 @@
                 <tag name="maker.command" />
             </service>
 
+            <service id="maker.maker.make_dynamic_entity" class="Symfony\Bundle\MakerBundle\Maker\MakeDynamicEntity">
+                <argument type="service" id="maker.file_manager" />
+                <argument type="service" id="maker.doctrine_helper" />
+                <argument>null</argument>
+                <argument type="service" id="maker.generator" />
+                <argument type="service" id="maker.entity_class_generator" />
+                <argument type="service" id="maker.php_compat_util" />
+                <tag name="maker.command" />
+            </service>
+
             <service id="maker.maker.make_fixtures" class="Symfony\Bundle\MakerBundle\Maker\MakeFixtures">
                 <tag name="maker.command" />
             </service>
